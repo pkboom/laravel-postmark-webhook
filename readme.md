@@ -1,10 +1,7 @@
-# Very short description of the package
+# Laravel Postmark Webhook
 
 [![Latest Stable Version](https://poser.pugx.org/pkboom/laravel-calm/v/stable)](https://packagist.org/packages/pkboom/laravel-calm)
 [![Build Status](https://travis-ci.com/pkboom/laravel-calm.svg?branch=master)](https://travis-ci.com/pkboom/laravel-calm)
-
-This is where your description should go. Try and limit it to a paragraph or two.
-<img src="/images/demo.png" width="800"  title="demo">
 
 ## Installation
 
@@ -14,20 +11,48 @@ You can install the package via composer:
 composer require pkboom/laravel-postmark-webhook
 ```
 
-## Usage
-
-```php
-$skeleton = new pkboom\PostmarkWebhook();
-echo $skeleton->echoPhrase('Hello, pkboom!');
-```
-
-## Requirements
-
-### Testing
+Run the migration:
 
 ```bash
-composer test
+php artisan migrate
 ```
+
+## Usage
+
+You can see postmark messages such as bounce and spam with
+
+```bash
+php artisan postmark-message:show
+```
+
+<img src="/images/demo.png" width="800"  title="demo">
+
+You can also use options such as `--bounce` and `--spam`.
+
+You can optionally publish the config file with:
+
+```bash
+php artisan vendor:publish --provider="Pkboom\RouteUsage\RouteUsageServiceProvider" --tag="config"
+```
+
+This is the contents of the published config file:
+
+```php
+<?php
+
+return [
+    /**
+     * You can set up postmark user and password here. They should be the same values as you set up
+     * in postmark webhook page.
+     */
+    'user' => env('POSTMARK_USER', null),
+    'password' => env('POSTMARK_PASSWORD', null),
+];
+```
+
+If you want to use `Basic auth credentials`, go to `postmark webhook` page and set up credentials.
+
+<img src="/images/demo2.png" width="800"  title="demo">
 
 ## License
 
