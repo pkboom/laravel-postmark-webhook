@@ -1,0 +1,46 @@
+{
+  "name": "pkboom/laravel-postmark-webhook",
+  "description": "",
+  "keywords": [
+    "pkboom",
+    "laravel-postmark-webhook"
+  ],
+  "homepage": "https://github.com/pkboom/laravel-postmark-webhook",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Keunbae Park",
+      "email": "ppotpo@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "orchestra/testbench": "^5.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pkboom\\PostmarkWebhook\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pkboom\\PostmarkWebhook\\PostmarkWebhookServiceProvider"
+      ]
+    }
+  }
+}
