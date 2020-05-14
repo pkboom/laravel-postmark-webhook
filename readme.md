@@ -32,7 +32,7 @@ You can also use options such as `--bounce` and `--spam`.
 You can optionally publish the config file with:
 
 ```bash
-php artisan vendor:publish --provider="Pkboom\RouteUsage\RouteUsageServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Pkboom\PostmarkWebhook\PostmarkWebhookServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
