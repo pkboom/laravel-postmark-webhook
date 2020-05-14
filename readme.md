@@ -1,7 +1,7 @@
 # Laravel Postmark Webhook
 
-[![Latest Stable Version](https://poser.pugx.org/pkboom/laravel-calm/v/stable)](https://packagist.org/packages/pkboom/laravel-calm)
-[![Build Status](https://travis-ci.com/pkboom/laravel-calm.svg?branch=master)](https://travis-ci.com/pkboom/laravel-calm)
+[![Total Downloads](https://poser.pugx.org/pkboom/laravel-postmark-webhook/downloads)](https://packagist.org/packages/pkboom/laravel-postmark-webhook)
+[![Build Status](https://travis-ci.com/pkboom/laravel-postmark-webhook.svg?branch=master)](https://travis-ci.com/pkboom/laravel-postmark-webhook)
 
 ## Installation
 
